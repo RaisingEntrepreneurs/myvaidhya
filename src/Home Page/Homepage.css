@@ -1,0 +1,86 @@
+.nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left:auto ;
+    background-color:beige;
+}
+.navheader{
+    list-style: none;
+    justify-content: space-between;
+    display: flex;
+    margin: 0; /* Remove default margin from the ul element */
+    padding: 0; /* Remove default padding from the ul element */
+    font-size: 30px; 
+}
+
+.navheader > li {
+  margin-left: 20px; /* Adjust the spacing between the items */
+  padding: 0;
+  font-size: 30px; 
+}
+
+.footertext {
+    align-self: flex-end;
+  }
+
+
+  /*form {
+    display: flex;
+    z-index: 50;
+    flex-direction: column;
+    align-items: center;
+  }*/
+
+  /* src/Home Page/Login.css */
+  .login-container {
+    border: 2px solid #ccc;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('C:\Users\vishn\Desktop\Vishnudar Vaidhya\myvaidhya\src\images\Goutham.PNG');
+    opacity: 100;
+  }
+  .form-group h2{
+    text-align: center;
+    margin-top: 5px;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    color:azure;
+    padding: 15px;
+  }
+  
+ .form-group {
+   /* width: auto;
+    min-height: auto;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #c9c2c7;
+    display: flex;*/
+    padding: 10px;
+  }
+  
+  form {
+    flex-basis: 50%;
+    background: #96917d;
+    font-family: roboto;
+    padding: 50px;
+  }
+  
+  button {
+    margin-top: 10px;
+    text-align: center;
+    color: rgb(43, 5, 181);
+  }
+  .login-container img {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    background: #00b894;
+  }
+  
