@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 ///import axios from 'axios';
 import { Container, Typography, Paper, Avatar, Box } from '@mui/material';
-import Patientheader from './Patientheader';
-const MyProfile = () => {
-  const [patientData, setPatientData] = useState(null);
+import FrontdeskHeader from './FDHeader';
+const FDMyProfile = () => {
+  const [FrontdeskData, setFrontdeskData] = useState(null);
 
   useEffect(() => {
     const apiUrl = 'http://127.0.0.1:3010';
@@ -26,7 +26,7 @@ const MyProfile = () => {
       })
       .then((data) => {
         console.log('Received data:', data);
-        setPatientData(data[0]);
+        setFrontdeskData(data[0]);
       })
       .catch((error) => {
         console.error('Error:', error);
@@ -34,8 +34,9 @@ const MyProfile = () => {
   }, []);
 
   return (
+    <div>
+      <FrontdeskHeader />
     <Container>
-      <Patientheader />
       <Typography variant="h4" gutterBottom>
         My Profile
       </Typography>
@@ -48,53 +49,52 @@ const MyProfile = () => {
         >
           <Avatar
             alt="Patient Image"
-            src={patientData?.img || 'default_image.jpg'}
+            src={FrontdeskData?.img || 'default_image.jpg'}
             sx={{ width: 100, height: 100 }}
           />
           <Box>
             <Typography variant="h6">
-              {`${patientData?.firstname} ${patientData?.lastname}`}
+              {`${FrontdeskData?.firstname} ${FrontdeskData?.lastname}`}
             </Typography>
             <Typography>
-              Date of Birth: {new Date(patientData?.dob).toLocaleDateString()}
+              Date of Birth: {new Date(FrontdeskData?.dob).toLocaleDateString()}
             </Typography>
             <Typography>
-              Username: {patientData?.username}
+              Username: {FrontdeskData?.username}
             </Typography>
             <Typography>
-              Gender: {patientData?.gender}
+              Gender: {FrontdeskData?.gender}
             </Typography>
             <Typography>
-              Marital Status: {patientData?.martial_sts}
+              Qualification: {FrontdeskData?.qua}
             </Typography>
           </Box>
           <Box>
             <Typography>
-              Address: {patientData?.address}
+              Address: {FrontdeskData?.address}
             </Typography>
             <Typography>
-              City: {patientData?.city}
+              City: {FrontdeskData?.city}
             </Typography>
             <Typography>
-              State: {patientData?.sts}
+              State: {FrontdeskData?.sts}
             </Typography>
             <Typography>
-              Zip Code: {patientData?.zip_code}
+              Zip Code: {FrontdeskData?.zip_code}
             </Typography>
             <Typography>
-              Phone Number: {patientData?.ph_no}
+              Phone Number: {FrontdeskData?.ph_no}
             </Typography>
             <Typography>
-              Alternate Phone Number: {patientData?.alt_phn_no}
+              Alternate Phone Number: {FrontdeskData?.alt_phn_no}
             </Typography>
-            <Typography>
-              Primary Physician: {patientData?.prmy_phyn}
-            </Typography>
+            
           </Box>
         </Box>
       </Paper>
     </Container>
+    </div>
   );
 };
 
-export default MyProfile;
+export default FDMyProfile;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { TextField, Button, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
+import { Box,TextField, Button, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
 import DoctorHeader from './Doctorheader';
 
 const Todo = () => {
@@ -38,9 +38,10 @@ const Todo = () => {
 
   return (
     <div>
-      <DoctorHeader>
-      <h2>To-Do List</h2>
-      </DoctorHeader>
+      <DoctorHeader />
+      <Box>
+         <h2>To-Do List</h2>
+         </Box>
       <form onSubmit={handleSubmit}>
         <TextField
           label="Task"

@@ -33,10 +33,9 @@ const MyCalendar = () => {
 
   return (
     <div>
-      <DoctorHeader>
-        <h2>Calendar</h2>
-      </DoctorHeader>
+      <DoctorHeader />       
     <Container maxWidth="lg" style={{ marginTop: '2rem' }}>
+    <h2>Calendar</h2>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <Calendar onChange={handleDateChange} value={selectedDate} />

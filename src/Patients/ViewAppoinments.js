@@ -9,7 +9,7 @@ import {
   TableCell,
   Paper,
 } from '@mui/material';
-
+import Patientheader from './Patientheader';
 const Appointments = () => {
   // Sample data for appointments
   const [appointments, setAppointments] = useState([
@@ -32,6 +32,7 @@ const Appointments = () => {
 
   return (
     <Container>
+      <Patientheader />
       <Typography variant="h4" gutterBottom>
         Appointments
       </Typography>

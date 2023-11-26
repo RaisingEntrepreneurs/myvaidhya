@@ -35,9 +35,7 @@ const PatientSearch = () => {
 
   return (
     <div>
-    <DoctorHeader>
-      <h2>Patient Search</h2>
-      </DoctorHeader>
+    <DoctorHeader />
     <Box sx={{ p: 2 }}>
       <h2>Patient Search</h2>
       <TextField

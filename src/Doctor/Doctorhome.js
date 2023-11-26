@@ -7,7 +7,6 @@ function Doctorhome(){
     return(
         
         <div>
-            <h2>Testing</h2>
         <DoctorHeader />
     </div>
     )

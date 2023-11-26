@@ -12,6 +12,7 @@ import {
   Button,
   Box
 } from '@mui/material';
+import Patientheader from './Patientheader';
 
 const Reports = () => {
   const [report, setReport] = useState([]);
@@ -46,6 +47,7 @@ const Reports = () => {
 
   return (
     <Container>
+      <Patientheader />
         <Typography variant="h4">Report History/Result</Typography>
         <Box display="flex" alignItems="center">
         <TextField

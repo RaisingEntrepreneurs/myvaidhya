@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Grid, Paper, Button, Select, MenuItem, InputLabel, FormControl } from '@mui/material';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-
+import Patientheader from './Patientheader';
 const ScheduleAppointment = () => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [selectedTime, setSelectedTime] = useState('');
@@ -38,6 +38,8 @@ const ScheduleAppointment = () => {
   };
 
   return (
+    <div>
+    <Patientheader />
         <Grid item xs={12} md={6}>
           <Paper style={{ padding: '1rem' }}>
             <h2>Schedule an Appointment</h2>
@@ -96,7 +98,7 @@ const ScheduleAppointment = () => {
             </Button>
           </Paper>
         </Grid>
-      
+        </div>
   );
 };
 

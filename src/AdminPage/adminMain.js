@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, Button, Container, Grid, Typography, Paper, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
-
+import AdminHeader from './AdmnHeader';
 const AdminPage = () => {
   const [doctors, setDoctors] = useState([]);
   const [staff, setStaff] = useState([]);
@@ -11,7 +11,7 @@ const AdminPage = () => {
     first_name: '',
     last_name: '',
     dob: '',
-    DOC_PIC: null,
+    DOC_PIC: '',
     DEGREE_TYPE: '',
   });
 
@@ -99,7 +99,7 @@ const AdminPage = () => {
         first_name: '',
         last_name: '',
         dob: '',
-        DOC_PIC: null,
+        DOC_PIC: '',
         DEGREE_TYPE: '',
       });
     })
@@ -109,7 +109,10 @@ const AdminPage = () => {
   };
 
   return (
+    <div>
+    
     <Container sx={{ py: 4 }}>
+    <AdminHeader></AdminHeader>
       <Typography variant="h4" mb={2}>Admin Page</Typography>
 
       {/* Category Dropdown */}
@@ -155,6 +158,7 @@ const AdminPage = () => {
                 fullWidth
                 label="Date of Birth"
                 type="date"
+
                 name="dob"
                 value={formData.dob}
                 onChange={(e) => setFormData({ ...formData, dob: e.target.value })}
@@ -207,10 +211,11 @@ const AdminPage = () => {
       <Typography variant="h4" mb={2}>Nurses</Typography>
       <ul>
         {nurses.map((nurse, index) => (
-          <li key={index}>{nurse.first_name} {nurse.last_name}</li>
+          <li key={index}>{nurse.first_name} {nurse.last_name}- {nurse.DEGREE_TYPE}</li>
         ))}
       </ul>
     </Container>
+    </div>
   );
 };
 

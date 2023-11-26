@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 ///import axios from 'axios';
 import { Container, Typography, Paper, Avatar, Box } from '@mui/material';
-import Patientheader from './Patientheader';
-const MyProfile = () => {
+import NurseHeader from './NurseHeader';
+
+const NurseProfile = () => {
   const [patientData, setPatientData] = useState(null);
 
   useEffect(() => {
@@ -35,7 +36,7 @@ const MyProfile = () => {
 
   return (
     <Container>
-      <Patientheader />
+      <NurseHeader />
       <Typography variant="h4" gutterBottom>
         My Profile
       </Typography>
@@ -97,4 +98,4 @@ const MyProfile = () => {
   );
 };
 
-export default MyProfile;
+export default NurseProfile;

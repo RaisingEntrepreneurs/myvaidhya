@@ -70,10 +70,9 @@ const PatientForm = () => {
   return (
 
     <div>
-    <DoctorHeader>
-      <h2>New Patient Form</h2>
-    </DoctorHeader>
+    <DoctorHeader />
     <Container maxWidth="md" sx={{ marginTop: 4 }}>
+    <h2>New Patient Form</h2>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>

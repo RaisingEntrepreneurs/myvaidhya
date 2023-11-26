@@ -12,6 +12,8 @@ import {
   Button,
 } from '@mui/material';
 
+import Patientheader from './Patientheader';
+
 function Document() {
   const [selectedDocument, setSelectedDocument] = useState('Document A');
   const [showHistory, setShowHistory] = useState(false);
@@ -53,6 +55,7 @@ function Document() {
 
   return (
     <Container>
+      <Patientheader />
       <Typography variant="h4">Document Actions</Typography>
       <Select
         label="Select Document"
